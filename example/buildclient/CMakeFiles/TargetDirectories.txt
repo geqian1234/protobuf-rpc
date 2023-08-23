@@ -1,4 +1,0 @@
-/home/feng/CLionProjects/git-tinglei/protobuf-rpc/example/buildclient/CMakeFiles/rebuild_cache.dir
-/home/feng/CLionProjects/git-tinglei/protobuf-rpc/example/buildclient/CMakeFiles/edit_cache.dir
-/home/feng/CLionProjects/git-tinglei/protobuf-rpc/example/buildclient/CMakeFiles/RpcServerTest.dir
-/home/feng/CLionProjects/git-tinglei/protobuf-rpc/example/buildclient/CMakeFiles/RpcClientTest.dir
