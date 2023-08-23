@@ -107,10 +107,9 @@ public:
     void Start(int bindPort);
     void RegisterZooServer(std::shared_ptr<ZookeeperCenter>zk);
 private:
-    /*根据serviceId获取service*/
     google::protobuf::Service* GetService(std::string const&ServiceName);
 
-    /*根据methodId获取method*/
+   
     MethodData* GetMethod(std::string const& ServiceName,std::string const& MethodName);
 
     /*根据RPC请求的serviceId和methodId取出相应的方法去执行并获取执行结果写回响应*/

@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option cc_generic_services = true;
+package example;
+
+message HelloReqMessage
+{
+   
+     bytes ClientName = 1;    
+}
+
+message HelloResMessage
+{
+     bytes Response = 1;   
+}
+message OperaReq
+{
+     int64 a=1;
+     int64 b=2;
+}
+message OperaRes
+{
+    int64 c = 1;
+}
+
+message OperaReqF
+{
+     float a = 1;
+     float b = 2;
+}
+message OperaResF
+{
+     float c = 1;
+}
+service HelloService
+{
+    rpc Hello(HelloReqMessage) returns(HelloResMessage);
+}
+service IntCalService
+{
+    //rpc Echo(EchoReq) returns(EchoRes);
+
+    rpc Add(OperaReq) returns(OperaRes);
+
+    rpc Sub(OperaReq) returns(OperaRes);
+}
+
+service FloatCalService
+{
+    rpc Mul(OperaReqF) returns(OperaResF);
+    rpc Div(OperaReqF) returns(OperaResF);
+}
