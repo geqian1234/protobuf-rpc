@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../zk_cpp/zk_cpp.h
+stdint.h
+-
+stdio.h
+-
+string
+-
+vector
+-
+mutex
+-
+memory
+-
+unordered_map
+-
+functional
+-
+
+/home/feng/CLionProjects/git-tinglei/protobuf-rpc/zk_cpp/zk_cpp_test.cpp
+zk_cpp/zk_cpp.h
+/home/feng/CLionProjects/git-tinglei/protobuf-rpc/zk_cpp/zk_cpp/zk_cpp.h
+stdio.h
+-
+iostream
+-
+string
+-
+

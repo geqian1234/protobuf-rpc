@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libpbrpc.a  CMakeFiles/pbrpc.dir/codec/LengthFieldPrepender.cpp.o CMakeFiles/pbrpc.dir/codec/LengthFieldBasedFrameDecoder.cpp.o CMakeFiles/pbrpc.dir/protobufCoder/RpcMessage.pb.cc.o CMakeFiles/pbrpc.dir/protobufCoder/RpcMsgSerializeHandler.cc.o CMakeFiles/pbrpc.dir/net/PbRpcClient.cc.o CMakeFiles/pbrpc.dir/net/PbRpcServer.cc.o CMakeFiles/pbrpc.dir/net/futureRpcCallProxy.cc.o CMakeFiles/pbrpc.dir/util/StringUtil.cc.o CMakeFiles/pbrpc.dir/util/LinuxNetworkUtil.cc.o
+/usr/bin/ranlib ../lib/libpbrpc.a

@@ -1,9 +1,9 @@
 project(example)
 cmake_minimum_required(VERSION 3.0.2)
-include_directories(/home/feng/CLionProjects/rpc-protobuf-cpp)
-include_directories(/home/feng/CLionProjects/rpc-protobuf-cpp/zookeeper)
+include_directories(/home/feng/CLionProjects/git-tinglei/protobuf-rpc)
+
 include_directories(/usr/local/include/zookeeper)
-link_directories(/home/feng/CLionProjects/rpc-protobuf-cpp/lib)
+link_directories(/home/feng/CLionProjects/git-tinglei/protobuf-rpc/lib)
 link_directories(/usr/local/lib)
 add_definitions(-DTHREADED)
 link_libraries(protobuf glog gflags wangle fizz proxygencurl proxygen folly fmt 

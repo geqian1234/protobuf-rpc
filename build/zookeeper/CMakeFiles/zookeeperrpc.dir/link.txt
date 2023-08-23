@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libzookeeperrpc.a  CMakeFiles/zookeeperrpc.dir/zookeeperclient.cpp.o CMakeFiles/zookeeperrpc.dir/zookeepercenter.cpp.o
+/usr/bin/ranlib ../../lib/libzookeeperrpc.a

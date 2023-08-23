@@ -81,12 +81,12 @@ public:
         //负载均衡轮询策略
         if(lbs == RoundRobin)
         {
-            rpcClient = RoundRobin_Select(curReqId);
+            rpcClient = RoundRobin_Select(methodname,curReqId);
         }
         //负载均衡随机策略
         else if(lbs == RANDOM)
         {
-            rpcClient = Random_Select(curReqId);
+            rpcClient = Random_Select(methodname,curReqId);
         }
         //负载均衡Hash策略
         else if(lbs == HASH)

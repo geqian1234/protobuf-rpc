@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libzk_cpp.a  CMakeFiles/zk_cpp.dir/zk_cpp.cpp.o
+/usr/bin/ranlib ../../lib/libzk_cpp.a

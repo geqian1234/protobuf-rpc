@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/zk_cpp_test.dir/zk_cpp_test.cpp.o  -o ../../bin/zk_cpp_test   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib ../../lib/libzk_cpp.a -lzookeeper_mt 

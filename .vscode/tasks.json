@@ -1,0 +1,116 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/protobuf/csharp/src/Google.Protobuf.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/protobuf/csharp/src/Google.Protobuf.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/protobuf/csharp/src/Google.Protobuf.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+			"type": "shell",
+			"label": "rmdir",
+			"command": "rm",
+			"args": [
+				"-rf",
+				"buildclient"
+				//"-fdiagnostics-color=always",
+				//"-g",
+				//"${file}",
+				//"-o",
+				//"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/example"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: /usr/bin/gcc"
+		},
+		{
+			"type": "shell",
+			"label": "mkdir",
+			"command": "mkdir",
+			"args": [
+				"buildclient"
+				//"-fdiagnostics-color=always",
+				//"-g",
+				//"${file}",
+				//"-o",
+				//"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/example"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: /usr/bin/gcc",
+			"dependsOn":["rmdir"]
+		},
+		{
+			"type": "shell",
+			"label": "cmake",
+			"command": "cmake",
+			"args": [
+				"-DCMAKE_BUILD_TYPE=Debug",
+				".."
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/example/buildclient"
+			},
+			"dependsOn":[
+				"mkdir"
+			]
+		},{
+			"type": "shell",
+			"label": "build",
+			"command":"make",
+			"args": [],
+			"options": {
+				"cwd": "${workspaceFolder}/example/buildclient"
+			},
+			"dependsOn":["cmake"],
+			"dependsOrder": "sequence",
+		}
+    ]
+}

@@ -8,7 +8,7 @@
 #include "net/PbRpcClient.h"
 #include "net/futureRpcCallProxy.h"
 
-#include "example/exampleservice.pb.h"
+#include "exampleservice.pb.h"
 
 using namespace std;
 using namespace folly;
@@ -63,13 +63,13 @@ int main(int argc, char* argv[])
             ostringstream ss;
             stringstream ssi;
             ss<<" --- "<<i<<" --- ";
-            req->set_request(ss.str());
+            req->set_clientname(ss.str());
             //req->SerializePartialToOstream(&cout);
-            helloServiceCallProxy.CallMethod<EchoRes>("Hello", req)
+            helloServiceCallProxy.CallMethod<HelloResMessage>("Hello", req)
                     .thenValue(
                             [req](HelloResMessage res)
                             {
-                                cout<<"AsyncFuture call MyService::Echo() req: "<<req->request()<<"| res: "<<res.response()<<endl;
+                                cout<<"AsyncFuture call MyService::Echo() req: "<<req->clientname()<<"| res: "<<res.response()<<endl;
                             })
                     .thenError(folly::tag_t<std::exception>{},
                             [](const std::exception& e)
