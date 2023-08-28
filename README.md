@@ -16,3 +16,7 @@
 **2.安装wangle** [wangle安装](https://github.com/facebook/wangle.git)
 
 **3.安装protobuf**
+**4.编译 protobuf-rpc**
+`git clone `
+
+
